@@ -39,12 +39,37 @@
             max-width: 100%;
             height: auto;
         }
+        
+        .download-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+            z-index: 1000;
+        }
+        
+        .download-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div id="pdfContainer">
         <div class="loading">Loading PDF...</div>
     </div>
+    
+    <a href="download.pdf" class="download-button" download>
+        📥 Download PDF
+    </a>
 
     <script>
         // Set up PDF.js worker
